@@ -1,0 +1,9 @@
+# Maven build output
+/target/
+
+# Editor settings
+/.vscode/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
