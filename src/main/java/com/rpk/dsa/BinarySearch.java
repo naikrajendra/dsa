@@ -1,5 +1,14 @@
 package com.rpk.dsa;
 
+/**
+ * This class provides a method to perform binary search on a sorted array.
+ * The `binarySearch` method uses an iterative approach to find the index of a target value in the array. If the target value is found, it returns the index; otherwise, it returns -1.
+ * The time complexity of this approach is O(log n), where n is the number of elements in the array, as the search space is halved with each iteration. 
+ * The space complexity is O(1), as it uses a constant amount of space for variables regardless of the input size.  
+ * 
+ * BinarySearch
+ */
+
 public class BinarySearch {
 
     public int binarySearch(int[] arr, int target) {
