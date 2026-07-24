@@ -12,12 +12,15 @@ public class Fibonacci {
 
     public int fibonacci(int n) {
         if (n <= 1) {
+            System.out.print(n + " ");
             return n;
         }
         int previous = 0;
         int current = 1;
+        System.out.print(previous + " " + current + " ");
         for (int i = 2; i <= n; i++) {
             int next = previous + current;
+            System.out.print(next + " ");
             previous = current;
             current = next;
         }
@@ -28,12 +31,7 @@ public class Fibonacci {
         Fibonacci fib = new Fibonacci();
         int n = 10; // Example input
         System.out.print("Fibonacci numbers up to " + n + ": ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(fib.fibonacci(i));
-            if (i < n - 1) {
-                System.out.print(" ");
-            }
-        }
+        fib.fibonacci(n - 1);
         System.out.println();
     }
 
