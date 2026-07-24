@@ -8,7 +8,7 @@ package com.rpk.dsa;
  * Fibonacci
  */
 
-public class Fibonacci {
+public class FibonacciSpaceOptimization {
 
     public int fibonacci(int n) {
         if (n <= 1) {
@@ -28,7 +28,7 @@ public class Fibonacci {
     }
 
     public static void main(String[] args) {
-        Fibonacci fib = new Fibonacci();
+        FibonacciSpaceOptimization fib = new FibonacciSpaceOptimization();
         int n = 10; // Example input
         System.out.print("Fibonacci numbers up to " + n + ": ");
         fib.fibonacci(n - 1);
