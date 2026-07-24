@@ -120,6 +120,7 @@ public class AutoSuggestionTrie {
         }
         return true;
     }
+    
     public void autoComplete(String prefix) {
         TrieNode current = root;
         for (char ch : prefix.toCharArray()) {
