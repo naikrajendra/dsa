@@ -37,8 +37,6 @@ public class PathSum {
     }
 
     public static void main(String[] args) {
-        PathSum tree = new PathSum();
-
         // Create a sample binary tree
         TreeNode root = new TreeNode(5);
         root.left = new TreeNode(4);
@@ -51,7 +49,7 @@ public class PathSum {
         root.right.right.right = new TreeNode(1);
 
         int targetSum = 22;
-        boolean result = tree.hasPathSum(root, targetSum);
+        boolean result = hasPathSum(root, targetSum);
         System.out.println("Has path sum of " + targetSum + ": " + result); // Output: true
     }
 

@@ -36,8 +36,6 @@ public class PreOrderTraversalDFS {
     }
 
     public static void main(String[] args) {
-        PreOrderTraversalDFS traversal = new PreOrderTraversalDFS();
-
         // Create a sample binary tree
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
@@ -46,7 +44,7 @@ public class PreOrderTraversalDFS {
         root.left.right = new TreeNode(5);
 
         System.out.print("Pre-order Traversal: ");
-        traversal.preOrderTraversalDFS(root); // Output: 1 2 4 5 3
+        preOrderTraversalDFS(root); // Output: 1 2 4 5 3
     }   
 
 }

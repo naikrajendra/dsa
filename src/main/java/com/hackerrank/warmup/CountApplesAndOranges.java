@@ -26,20 +26,21 @@ public class CountApplesAndOranges {
         int appleCount =0;
         int orangeCount = 0;
         
-        if(apples == null && apples.size() <= 0) appleCount = 0;
-        if(oranges == null && oranges.size() <= 0 ) orangeCount = 0;
-        
-        for(int appleDistance : apples) {
-            int newAppleDistance = a + appleDistance; // 4+2, 4+3, 4-4
-            if(newAppleDistance >= s && newAppleDistance <= t) {
-                appleCount++; // 1
+        if (apples != null) {
+            for(int appleDistance : apples) {
+                int newAppleDistance = a + appleDistance; // 4+2, 4+3, 4-4
+                if(newAppleDistance >= s && newAppleDistance <= t) {
+                    appleCount++; // 1
+                }
             }
         }
-        
-        for(int orangeDistance : oranges) {
-            int newOrangeDistance = b + orangeDistance; //12+3, 12-2, 12-4
-            if(newOrangeDistance >= s && newOrangeDistance <= t) {
-                orangeCount++; // 1,2
+
+        if (oranges != null) {
+            for(int orangeDistance : oranges) {
+                int newOrangeDistance = b + orangeDistance; //12+3, 12-2, 12-4
+                if(newOrangeDistance >= s && newOrangeDistance <= t) {
+                    orangeCount++; // 1,2
+                }
             }
         }
         System.out.println(appleCount); //1

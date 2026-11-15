@@ -33,15 +33,13 @@ public class PostOrderTraversalDFS {
     }
 
     public static void main(String[] args) {
-        PostOrderTraversalDFS traversal = new PostOrderTraversalDFS();
-
         // Create a sample binary tree
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
 
         System.out.print("Post-order Traversal: ");
-        traversal.postOrderTraversalDFS(root); // Output: 3 2 1
+        postOrderTraversalDFS(root); // Output: 3 2 1
     }
 
 }

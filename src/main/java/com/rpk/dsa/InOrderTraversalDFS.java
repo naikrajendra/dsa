@@ -34,15 +34,13 @@ public class InOrderTraversalDFS {
     }
 
     public static void main(String[] args) {
-        InOrderTraversalDFS traversal = new InOrderTraversalDFS();
-
         // Create a sample binary tree
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
 
         System.out.print("In-order Traversal: ");
-        traversal.inOrderTraversalDFS(root); // Output: 1 3 2
+        inOrderTraversalDFS(root); // Output: 1 3 2
     }
 
 

@@ -1,7 +1,6 @@
 package com.hackerrank.warmup;
 
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * Given pointers to the heads of two sorted linked lists, merge them into a

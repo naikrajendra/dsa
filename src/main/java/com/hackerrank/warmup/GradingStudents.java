@@ -18,7 +18,7 @@ public class GradingStudents {
         public static List<Integer> gradingStudents(List<Integer> grades) {
         // Write your code here
         //check if grades is not null and > 0
-        if(grades == null && grades.size() < 1) return grades;
+        if (grades == null || grades.isEmpty()) return grades;
         List<Integer> roundedGrades = new ArrayList<>();
         // for loop to go over the each grade
         // 4, 73, 67, 38, 33

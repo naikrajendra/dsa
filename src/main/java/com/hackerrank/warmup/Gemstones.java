@@ -19,7 +19,7 @@ public class Gemstones {
         // mark it gemstone and increment gemstone counter
         int gemstoneCounter = 0;
         HashMap<Character, Integer> map = new HashMap<>();
-        if (arr == null && arr.size() <= 0)
+        if (arr == null || arr.isEmpty())
             return gemstoneCounter;
         for (int i = 0; i < arr.size(); i++) {
             String s = arr.get(i);

@@ -19,7 +19,7 @@ public class LoveLetterMystery {
         // if not same then check the difference between them and add to flipcounter
         int numberOfOps = 0;
         // boundry condition
-        if (s == null && s.length() <= 0)
+        if (s == null || s.isEmpty())
             return numberOfOps;
 
         int firstpointer = 0;

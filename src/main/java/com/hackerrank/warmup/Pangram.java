@@ -22,7 +22,7 @@ public class Pangram {
         //after the loop ends, check number of characters in hashmap
         //if chars == 26 return pangram else not pangram
         String result = "";
-        HashSet<Character> set = new HashSet();
+        HashSet<Character> set = new HashSet<>();
         s = s.toLowerCase();
         for(int i=0; i < s.length(); i++) {
             char c = s.charAt(i);

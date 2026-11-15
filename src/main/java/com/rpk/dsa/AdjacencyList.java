@@ -1,6 +1,8 @@
 package com.rpk.dsa;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * This class represents an adjacency list for an undirected graph.
@@ -21,34 +23,34 @@ import java.util.LinkedList;
 public class AdjacencyList {
 
     private int vertices;
-    private LinkedList<Integer>[] adjacencyList;
+    private List<List<Integer>> adjacencyList;
 
     public AdjacencyList(int vertices) {
         this.vertices = vertices;
-        adjacencyList = new LinkedList[vertices];
+        adjacencyList = new ArrayList<>(vertices);
         for (int i = 0; i < vertices; i++) {
-            adjacencyList[i] = new LinkedList<>();
+            adjacencyList.add(new LinkedList<>());
         }
     }
 
     public void addEdge(int source, int destination) {
-        adjacencyList[source].add(destination);
-        adjacencyList[destination].add(source); // For undirected graph
+        adjacencyList.get(source).add(destination);
+        adjacencyList.get(destination).add(source); // For undirected graph
     }
 
     public void removeEdge(int source, int destination) {
-        adjacencyList[source].remove(Integer.valueOf(destination));
-        adjacencyList[destination].remove(Integer.valueOf(source)); // For undirected graph
+        adjacencyList.get(source).remove(Integer.valueOf(destination));
+        adjacencyList.get(destination).remove(Integer.valueOf(source)); // For undirected graph
     }
 
     public boolean hasEdge(int source, int destination) {
-        return adjacencyList[source].contains(destination);
+        return adjacencyList.get(source).contains(destination);
     }
 
     public void printGraph() {
         for (int i = 0; i < vertices; i++) {
             System.out.print("Vertex " + i + ":");
-            for (Integer neighbor : adjacencyList[i]) {
+            for (Integer neighbor : adjacencyList.get(i)) {
                 System.out.print(" -> " + neighbor);
             }
             System.out.println();

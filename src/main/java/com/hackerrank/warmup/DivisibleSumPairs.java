@@ -1,6 +1,7 @@
 package com.hackerrank.warmup;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * A class to find the number of pairs in an array whose sum is divisible by a
@@ -10,6 +11,8 @@ import java.util.List;
  */
 
 public class DivisibleSumPairs {
+
+    private static final Logger LOGGER = Logger.getLogger(DivisibleSumPairs.class.getName());
 
     /*
      * Complete the 'divisibleSumPairs' function below.
@@ -31,9 +34,10 @@ public class DivisibleSumPairs {
         // divide by k
         // if divisible, increment pairCount
         int pairCount = 0;
+        int size = Math.min(n, ar.size());
         //[1, 3, 2, 6, 1, 2] 6 3
-        for(int i=0; i < ar.size(); i++) {
-            for(int j=i+1; j < ar.size(); j++) { 
+        for(int i=0; i < size; i++) {
+            for(int j=i+1; j < size; j++) {
                 int sum = ar.get(i) + ar.get(j); 
                 //1+3=4, 1+2=3, 1+6=7, 1+1=2,1+2=3
                 //3+2=5, 3+6=9, 3+1, 3+2
@@ -53,7 +57,7 @@ public class DivisibleSumPairs {
         int n = ar.size();
         int k = 3;
         int result = divisibleSumPairs(n, k, ar);
-        System.out.println(result); // Output: 5
+        LOGGER.info(() -> Integer.toString(result)); // Output: 5
     }
 
 

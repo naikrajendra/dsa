@@ -48,8 +48,6 @@ public class BalancedBinaryTree {
     }
 
     public static void main(String[] args) {
-        BalancedBinaryTree tree = new BalancedBinaryTree();
-
         // Create a sample binary tree
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
@@ -58,7 +56,7 @@ public class BalancedBinaryTree {
         root.left.right = new TreeNode(5);
         root.right.right = new TreeNode(6);
 
-        boolean result = tree.isBalanced(root);
+        boolean result = isBalanced(root);
         System.out.println("Is the binary tree balanced? " + result); // Output: true
     }
 

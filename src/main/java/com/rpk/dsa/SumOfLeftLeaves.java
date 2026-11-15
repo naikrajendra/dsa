@@ -42,8 +42,6 @@ public class SumOfLeftLeaves {
     }
 
     public static void main(String[] args) {
-        SumOfLeftLeaves tree = new SumOfLeftLeaves();
-
         // Create a sample binary tree
         TreeNode root = new TreeNode(3);
         root.left = new TreeNode(9);
@@ -51,7 +49,7 @@ public class SumOfLeftLeaves {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
 
-        int result = tree.sumOfLeftLeaves(root);
+        int result = sumOfLeftLeaves(root);
         System.out.println("Sum of left leaves: " + result); // Output: 24 (9 + 15)
     }
 

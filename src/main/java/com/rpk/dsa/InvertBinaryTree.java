@@ -40,8 +40,6 @@ public class InvertBinaryTree {
     }
 
     public static void main(String[] args) {
-        InvertBinaryTree tree = new InvertBinaryTree();
-
         // Create a sample binary tree
         TreeNode root = new TreeNode(4);
         root.left = new TreeNode(2);
@@ -54,7 +52,7 @@ public class InvertBinaryTree {
         System.out.println("Original Binary Tree:");
         printInOrder(root); // Output: 1 2 3 4 6 7 9
 
-        tree.invertTree(root);
+        invertTree(root);
 
         System.out.println("\nInverted Binary Tree:");
         printInOrder(root); // Output: 9 7 6 4 3 2 1
